@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "rejoy";
+  src: url("../assets/NBInternationalProBoo.ttf") format("woff2"),
+    url("../assets/NBInternationalProBoo.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rejoy";
+  src: url("../assets/Rejouice-Headline.ttf") format("woff2"),
+    url("../assets/Rejouice-Headline.ttf") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
