@@ -26,6 +26,10 @@ const EarthAnimation = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
       mountRef.current.appendChild(renderer.domElement);
 
+      // Ensure the canvas is responsive
+      mountRef.current.style.width = "100%";
+      mountRef.current.style.height = "100%";
+
       createParticles();
       setupEventListeners();
       animate();
@@ -76,6 +80,9 @@ const EarthAnimation = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      // Update the mountRef size
+      mountRef.current.style.width = "100%";
+      mountRef.current.style.height = "100%";
     };
 
     const onMouseMove = (event) => {

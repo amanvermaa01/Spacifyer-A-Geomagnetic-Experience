@@ -13,9 +13,9 @@ import AboutUs from "./components/AboutUs";
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="max-w-full overflow-x-hidden">
         <nav>
-          <ul>
+          <ul className="flex flex-wrap justify-center">
             <li>
               <Link to="/"></Link>
             </li>

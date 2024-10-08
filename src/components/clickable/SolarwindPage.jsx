@@ -7,6 +7,11 @@ const SolarwindPage = () => {
   const handleHome = () => {
     navigate("/");
   };
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="relative h-screen bg-gray-900 text-white overflow-hidden">
@@ -33,9 +38,9 @@ const SolarwindPage = () => {
           </header>
 
           {/* Main Content */}
-          <main className="flex-grow flex items-end">
+          <main className="flex-grow flex items-end flex-col md:flex-row">
             <div className="w-full p-8">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight text-right max-w-3xl ml-auto align-middle w-[27rem]">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight text-right max-w-3xl ml-auto align-middle w-full">
                 The solar wind is a continuous stream of particles, mostly
                 protons and electrons, that flow from the sun.
               </h1>
@@ -78,7 +83,9 @@ const SolarwindPage = () => {
               flares, hit Earth’s magnetic field, they can disturb this balance
               and lead to geomagnetic storms.
             </p>
-            <div className="text-2xl ">Scroll Down For More ⬇️</div>
+            <div className="text-2xl text-center md:text-left">
+              Scroll Down For More ⬇️
+            </div>
           </div>
         </main>
         <div className="bg-black text-white py-16">

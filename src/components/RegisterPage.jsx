@@ -28,6 +28,11 @@ const RegisterPage = () => {
     }
 
     requestAnimationFrame(raf);
+
+    // Cleanup function to avoid memory leaks
+    return () => {
+      lenis.destroy(); // Ensure to destroy the Lenis instance
+    };
   });
 
   useGSAP(() => {
@@ -91,6 +96,7 @@ const RegisterPage = () => {
   // Handle form submission (dummy function)
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Add actual submission logic here, e.g., API call
     console.log("Form submitted:", formData);
   };
 

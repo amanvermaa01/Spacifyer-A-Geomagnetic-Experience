@@ -9,7 +9,7 @@ const AboutUs = () => {
   return (
     <div className="bg-black text-white min-h-screen font-sans relative">
       {/* Header */}
-      <header className="flex justify-between items-start p-6 relative z-10">
+      <header className="flex flex-col md:flex-row justify-between items-start p-6 relative z-10">
         <div>
           <h1 className="text-3xl font-bold font-[Rejoy]">Spacifyer</h1>
           <h2 className="text-2xl mt-2 font-[rejoy]">We Built</h2>
@@ -21,12 +21,12 @@ const AboutUs = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex justify-between p-6 relative z-10">
+      <main className="flex flex-col md:flex-row justify-between p-6 relative z-10">
         {/* Left side - empty for now */}
-        <div className="w-1/2"></div>
+        <div className="w-full md:w-1/2"></div>
 
         {/* Right side - Awards */}
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <ul className="space-y-6">
             <li className="font-[Rejoy]">
               <h3 className="text-lg mb-2">Aman Verma</h3>
@@ -44,21 +44,16 @@ const AboutUs = () => {
                 <li>Ig: yuraj_2602</li>
               </ul>
             </li>
-            <li className="font-[Rejoy]">
-              <h3 className="text-lg mb-2">Anshuman Dubey</h3>
-              <ul className="list-disc list-inside">
-                <li>dubeyanshuman1233@gmail.com</li>
-                <li>Ig: anshuman_dubey1233</li>
-              </ul>
-            </li>
           </ul>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 left-0 p-6 z-10">
+      <footer className="absolute bottom-0 left-0 p-6 z-10 text-center md:text-left">
         <p className="text-sm">™️</p>
-        <h2 className="text-6xl font-bold font-[Rejoy]">About Us</h2>
+        <h2 className="text-4xl md:text-6xl font-bold font-[Rejoy]">
+          About Us
+        </h2>
       </footer>
 
       {/* Background Image */}

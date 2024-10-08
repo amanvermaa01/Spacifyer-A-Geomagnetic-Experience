@@ -31,11 +31,11 @@ const AboutSite = () => {
 
   return (
     <div className="h-full w-full relative p-[5vw_2.8vw]">
-      <div className="flex items-end justify-between pb-[1.2vw] mb-[1vw] border-b border-black/[0.57]">
-        <h3 className="animate-on-scroll text-[1.7vw] font-medium w-[26%] text-white">
+      <div className="flex flex-col md:flex-row items-end justify-between pb-[1.2vw] mb-[1vw] border-b border-black/[0.57]">
+        <h3 className="animate-on-scroll text-[4vw] md:text-[1.7vw] font-medium w-full md:w-[26%] text-white">
           Get Ready To Explore Geomagnetic Storms™
         </h3>
-        <h4 className="animate-on-scroll text-[1.7vw] font-medium text-white">
+        <h4 className="animate-on-scroll text-[4vw] md:text-[1.7vw] font-medium text-white">
           Nashik / Maharashtra
         </h4>
       </div>
@@ -43,7 +43,7 @@ const AboutSite = () => {
       <hr className="text-white" />
 
       <div className="overflow-hidden elem">
-        <h1 className="animate-on-scroll text-[4.2vw] text-white font-thin font-50px">
+        <h1 className="animate-on-scroll text-[5vw] md:text-[4.2vw] text-white font-thin font-50px">
           Explore the fascinating world of geomagnetic storms predicted for May
           2024. Our website offers real-time updates, stunning visualizations,
           and expert insights into these powerful solar events. Learn how these
@@ -51,6 +51,16 @@ const AboutSite = () => {
           breathtaking auroras.
         </h1>
       </div>
+
+      <button
+        onClick={() => {
+          window.location.href =
+            "https://earth.nullschool.net/#current/wind/surface/level/orthographic=-282.86,22.31,1283/loc=75.303,13.957";
+        }}
+        className="bg-white text-black px-6 md:px-8 py-3 md:py-4 rounded-md font-[monospace] font-bold mt-8 mx-auto block"
+      >
+        Navigate On Map
+      </button>
 
       {/* Commented out video element
       <video

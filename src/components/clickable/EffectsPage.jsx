@@ -7,6 +7,11 @@ const EffectsPage = () => {
   const handleHome = () => {
     navigate("/");
   };
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="relative h-screen bg-gray-900 text-white overflow-hidden">
@@ -35,9 +40,9 @@ const EffectsPage = () => {
           </header>
 
           {/* Main Content */}
-          <main className="flex-grow flex items-end">
+          <main className="flex-grow flex items-end md:items-center">
             <div className="w-full p-8">
-              <h1 className="text-4xl md:text-6xl font-light leading-tight mr-[700px] max-w-3xl ml-auto">
+              <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-3xl mx-auto">
                 An aurora also commonly known as the northern lights or southern
                 lights, is a natural light display in Earth's sky, predominantly
                 seen in high-latitude regions.
@@ -60,7 +65,7 @@ const EffectsPage = () => {
         <main className="px-6 py-12 md:py-24 flex flex-col md:flex-row justify-between mt-[60px]">
           {/* Services Section */}
           {/* Description Section */}
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 mx-auto">
             <p className="text-lg mb-8 text-[30px] space-y-10 font-[rejoy] text-left leading-normal">
               The geomagnetic storm of May 2024, one of the most intense in two
               decades, created spectacular visual effects, particularly through
@@ -88,7 +93,7 @@ const EffectsPage = () => {
         <div className="bg-black text-white py-16">
           <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
             {/* Image on the left */}
-            <div className="md:w-1/2 mb-8 md:mb-0">
+            <div className="md:w-1/2 mb-8 md:mb-0 mx-auto">
               <img
                 src="./auoraeffect.webp"
                 alt="Geomagnetic Storm"
@@ -97,7 +102,7 @@ const EffectsPage = () => {
             </div>
 
             {/* Text on the right */}
-            <div className="md:w-1/2 md:pl-8">
+            <div className="md:w-1/2 md:pl-8 mx-auto">
               <h2 className="text-3xl font-bold mb-4">
                 1.Formation Of Auroras
               </h2>
@@ -119,7 +124,7 @@ const EffectsPage = () => {
 
             {/* Text on the right */}
             <div className="flex flex-row-reverse items-center">
-              <div className="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+              <div className="md:w-1/2 md:pl-8 mx-auto">
                 <img
                   src="https://scitechdaily.com/images/Geomagnetic-Storm-Satellite-Communications-Art-Concept-777x518.jpg"
                   alt="Geomagnetic Storm"

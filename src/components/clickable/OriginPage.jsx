@@ -7,6 +7,11 @@ const OriginPage = () => {
   const handleHome = () => {
     navigate("/");
   };
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="relative h-screen bg-gray-900 text-white overflow-hidden">
@@ -22,20 +27,20 @@ const OriginPage = () => {
         {/* Content Overlay */}
         <div className="relative z-10 h-full flex flex-col">
           {/* Header */}
-          <header className="flex justify-between items-center p-6">
+          <header className="flex flex-col md:flex-row justify-between items-center p-6">
             <div className="text-2xl font-bold font-[Rejoy]">Spacifyer</div>
             <button
               onClick={handleHome}
-              className="text-xl font-bold mt-6 font-mono"
+              className="text-xl font-bold mt-4 md:mt-0 font-mono"
             >
               Home
             </button>
           </header>
 
           {/* Main Content */}
-          <main className="flex-grow flex items-end">
+          <main className="flex-grow flex flex-col items-center md:items-end">
             <div className="w-full p-8">
-              <h1 className="text-4xl md:text-6xl font-light leading-tight mr-[700px] max-w-3xl ml-auto">
+              <h1 className="text-3xl md:text-4xl lg:text-6xl font-light leading-tight max-w-3xl text-center md:text-right">
                 Geomagnetic storms, also known as magnetic storms, are caused by
                 a disturbance in the Earth's magnetosphere due to solar wind.
               </h1>
@@ -56,7 +61,7 @@ const OriginPage = () => {
         {/* Main Content */}
         <main className="px-6 py-12 md:py-24 flex flex-col md:flex-row justify-between mt-[60px]">
           {/* Services Section */}
-          <div className="md:w-1/3 mb-8 md:mb-0">
+          <div className="md:w-1/3 mb-8 md:mb-0 text-center md:text-left">
             <h2 className="font-bold mb-4 font-[rejoy]">
               Source:{" "}
               <a
@@ -69,7 +74,7 @@ const OriginPage = () => {
           </div>
 
           {/* Description Section */}
-          <div className="md:w-2/3">
+          <div className="md:w-2/3 text-center md:text-left">
             <p className="text-lg mb-8">
               Geomagnetic storms, such as the one in May 2024, originate from
               solar activity, particularly when the Sun emits large bursts of
@@ -93,7 +98,7 @@ const OriginPage = () => {
             </div>
 
             {/* Text on the right */}
-            <div className="md:w-1/2 md:pl-8">
+            <div className="md:w-1/2 md:pl-8 text-center md:text-left">
               <h2 className="text-3xl font-bold mb-4">
                 Understanding Geomagnetic Storms Origin
               </h2>

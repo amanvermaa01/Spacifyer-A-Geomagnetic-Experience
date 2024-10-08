@@ -7,12 +7,12 @@ import SpaceWeather from "./SpaceWeather";
 import EarthAnimation from "./EarthAnimation";
 import Footer from "./Footer";
 import { Mosaic } from "react-loading-indicators";
-// import Loader from "./Loader";
 
 const LandingPage = () => {
   const [loading, setLoading] = useState(true);
   const page1ContentRef = useRef(null);
   const cursorRef = useRef(null);
+  const isVisible = true; // Assuming isVisible is always true for demonstration
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -62,6 +62,32 @@ const LandingPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem("hasVisitedLandingPage");
+    if (!hasVisited) {
+      window.scrollTo(0, 0);
+      sessionStorage.setItem("hasVisitedLandingPage", "true");
+    } else {
+      const lastScrollPosition = sessionStorage.getItem("lastScrollPosition");
+      if (lastScrollPosition) {
+        window.scrollTo(0, parseInt(lastScrollPosition, 10));
+      }
+    }
+
+    const handleBeforeUnload = () => {
+      sessionStorage.setItem(
+        "lastScrollPosition",
+        window.pageYOffset.toString()
+      );
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
   if (loading) {
     return (
       <div className="h-screen w-full flex items-center justify-center bg-black">
@@ -69,7 +95,7 @@ const LandingPage = () => {
           color="#ff8912"
           size="large"
           text="Spacifyer"
-          textColor="font-[rejoy] text-[2vw] font-thin "
+          textColor="font-[rejoy] text-2xl md:text-3xl lg:text-4xl font-thin"
         />
       </div>
     );
@@ -77,33 +103,35 @@ const LandingPage = () => {
 
   return (
     <>
-      <div ref={page1ContentRef} className="h-screen w-full bg-white relative">
+      <div
+        ref={page1ContentRef}
+        className="h-screen w-full bg-white relative overflow-hidden"
+      >
         <div
           ref={cursorRef}
-          className="h-[7.5vw] w-[7.5vw] bg-[#ff8912] rounded-full fixed z-[9] flex items-center justify-center -translate-x-1/2 -translate-y-1/2"
+          className={`h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 bg-[#ff8912] rounded-full fixed z-10 flex items-center justify-center -translate-x-1/2 -translate-y-1/2 ${
+            isVisible ? "md:flex" : "hidden"
+          }`}
         >
-          <h5 className="font-medium text-white">Play space</h5>
+          <h5 className="font-medium text-white text-xs md:text-sm lg:text-base">
+            Play space
+          </h5>
         </div>
         <video
-          className="h-screen opacity-0.85 w-full absolute object-cover"
+          className="h-screen w-full absolute object-cover"
           autoPlay
           loop
           muted
           src="./Geomagnetic Story Video.mp4"
         ></video>
         <div className="h-full w-full relative z-2 text-white flex flex-col items-center justify-between">
-          <nav className="flex items-center justify-between w-full p-[3vw]">
-            <h3 className="text-[1.4vw] font-thin">A Geomagnetic Experience</h3>
+          <nav className="flex items-center justify-between w-full p-4 md:p-6 lg:p-8">
+            <h3 className="text-sm md:text-base lg:text-lg font-thin">
+              A Geomagnetic Experience
+            </h3>
           </nav>
-          <h1 className="font-[rejoy] text-[20vw] font-thin leading-[27vw]">
-            {"spacifyer".split(" ").map((letter, index) => (
-              <span
-                key={index}
-                className="spacifyer-letterfont-[rejoy] inline-block"
-              >
-                {letter}
-              </span>
-            ))}
+          <h1 className="font-[rejoy] text-[1vw] sm:text-[7vw] md:text-[8vw] lg:text-[9vw] xl:text-[20vw] font-thin leading-tight md:leading-tight lg:leading-tight xl:leading-[27vw] text-center px-4">
+            spacifyer
           </h1>
         </div>
       </div>
