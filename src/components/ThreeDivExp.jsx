@@ -40,13 +40,13 @@ const ThreeDivExp = () => {
           <h2>"Failure is not an option." ~NASA</h2>
           <h4>See the work⤵️</h4>
         </div>
-        <div className="h-[75vh] w-full flex items-center justify-between mt-[8vw]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-8 md:mt-[8vw] h-auto md:h-[75vh]">
           <div
             onClick={handleOrigin}
-            className="box h-full w-[32.5%] relative group"
+            className="box w-full md:w-[32.5%] h-[50vh] md:h-full relative group cursor-pointer"
           >
             <img
-              className="absolute h-full w-full object-cover object-center transition-opacity duration-700 ease-linear group-hover:opacity-0"
+              className="absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ease-linear group-hover:opacity-0"
               src="./yellow-sun.jpg"
               alt="Yellow Sun"
             />
@@ -60,18 +60,19 @@ const ThreeDivExp = () => {
               <source src="./yellow-moving-sun.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="h-[500px] absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-linear group-hover:opacity-0">
-              <h2 className="text-white underline text-6xl font-bold font-mono shadow-lg p-2 bg-opacity-50">
+            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-linear group-hover:opacity-0">
+              <h2 className="text-white underline text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-mono shadow-lg p-2 bg-opacity-50">
                 Origin
               </h2>
             </div>
           </div>
+
           <div
             onClick={handleSolarwind}
-            className="box h-full w-[32.5%] relative group"
+            className="box w-full md:w-[32.5%] h-[50vh] md:h-full relative group cursor-pointer"
           >
             <img
-              className="absolute h-full w-full object-cover object-center transition-opacity duration-700 ease-linear group-hover:opacity-0"
+              className="absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ease-linear group-hover:opacity-0"
               src="./solowind.jpg"
               alt="Solarwind"
             />
@@ -85,18 +86,19 @@ const ThreeDivExp = () => {
               <source src="./solorwind-moving.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="h-[500px] absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-linear group-hover:opacity-0">
-              <h2 className="text-white text-6xl underline font-bold font-mono shadow-lg p-2 bg-opacity-50">
+            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-linear group-hover:opacity-0">
+              <h2 className="text-white underline text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-mono shadow-lg p-2 bg-opacity-50">
                 Solarwind
               </h2>
             </div>
           </div>
+
           <div
             onClick={handleEffects}
-            className="box h-full w-[32.5%] relative group"
+            className="box w-full md:w-[32.5%] h-[50vh] md:h-full relative group cursor-pointer"
           >
             <img
-              className="absolute h-full w-full object-cover object-center transition-opacity duration-700 ease-linear group-hover:opacity-0"
+              className="absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ease-linear group-hover:opacity-0"
               src="./aouras.jpg"
               alt="Aouras"
             />
@@ -110,13 +112,13 @@ const ThreeDivExp = () => {
               <source src="./aouras-moving.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="h-[500px] absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-linear group-hover:opacity-0">
-              <h2 className="text-white text-6xl font-bold underline font-mono shadow-lg p-2 bg-opacity-50">
+            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-linear group-hover:opacity-0">
+              <h2 className="text-white underline text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-mono shadow-lg p-2 bg-opacity-50">
                 Effects
               </h2>
             </div>
           </div>
-        </div>
+        </div>{" "}
       </div>
     </>
   );
