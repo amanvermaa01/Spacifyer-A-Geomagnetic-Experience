@@ -58,7 +58,7 @@ Installation
 
 Clone the repository
 
-git clone https://github.com/amanvermaa01/spacifyer-geomagnetic-experience.git
+git clone [https://github.com/amanvermaa01/spacifyer-geomagnetic-experience.git](https://github.com/amanvermaa01/Spacifyer-A-Geomagnetic-Experience)
 cd spacifyer-geomagnetic-experience
 
 
@@ -70,10 +70,6 @@ npm install
 Run the development server
 
 npm start
-
-
-The app will run at:
-👉 http://localhost:3000
 
 🛠️ Tech Stack
 Layer	Technology
@@ -164,10 +160,6 @@ NASA DONKI / CDAWeb
 NOAA Space Weather Prediction Center
 
 React Community + Open Source Libraries
-
-🎉 Demo
-
-🔗 (Add your hosted link here after deployment)
 
 ✨ Built with creativity, curiosity, and space-inspired passion for NASA Space Apps Challenge 2024.
 Not for operational forecasting or real-time space safety usage.
